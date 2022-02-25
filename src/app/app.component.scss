@@ -1,0 +1,33 @@
+quilt{display:block;width:100vw;height:100vh;overflow:hidden;position:fixed;top:0;left:0;z-index:0;}
+identity-container{display:block;width:100vw;position:fixed;left:0;z-index:1;
+    &.header{height:60px;top:0;
+        @media screen and (min-height:700px){
+            height:80px;
+        }
+    }
+    &.footer{
+        height:42px;bottom:0;
+        @media screen and (min-height:700px){
+            height:62px;
+        }
+
+    }
+}
+navigation {
+    display:block;width:1px;position:fixed;top:60px;left:-1px;z-index:2;overflow:visible;
+    @media screen and (min-width:800px){
+        width:150px;
+    }
+    @media screen and (min-height:700px){
+        top:80px;
+    }
+}
+.stage {
+    width:calc(100vw - 4em);height:calc(100% - 102px - 4em);padding:2em;position:fixed;top:60px;left:0;z-index:1;
+    @media screen and (min-width:800px){
+        width:calc(100vw - 150px - 4em);margin:0 0 0 150px;
+    }
+    @media screen and (min-height:700px){
+        height:calc(100% - 142px - 4em);top:80px;
+    }
+}
